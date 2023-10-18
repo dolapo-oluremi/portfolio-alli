@@ -61,7 +61,7 @@ const Navbar = () => {
         "&.resume__download": {
             border: `1px solid ${!isStickyNav ? ColorPalette.dark300 : ''}`,
             backgroundColor: isStickyNav ? 'transparent' : ColorPalette.brightBeige,
-            color: `${isStickyNav ?  ColorPalette.brightBeige : ColorPalette.dark300}`
+            color: `${isStickyNav ? ColorPalette.brightBeige : ColorPalette.dark300}`
         },
         "&.active": {
             color: isStickyNav ? ColorPalette.green : ColorPalette.brightBeige
@@ -72,8 +72,9 @@ const Navbar = () => {
     })
 
     const RenderMenuItems = () => {
-        const handleActiveTab = (e : React.ChangeEvent<HTMLInputElement>) => {
-            setActive(e.target.innerText)
+        const handleActiveTab = (e: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+            const target = e.target as HTMLElement
+            setActive(target.innerText)
         }
         return (<UList>
             {tabHeaders.map((item, i) => (
