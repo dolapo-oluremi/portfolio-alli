@@ -17,7 +17,7 @@ const Footer = () => {
     })
     const Form = styled.form({
         display: "grid",
-        width: "40%",
+        width: "50%",
         gridTemplateColumns: "repeat(10, 1fr)",
         gridTemplateRows: "repeat(5, 50px)",
         gap: 15,
@@ -43,6 +43,12 @@ const Footer = () => {
         "& > *:nth-child(4)": {
             gridColumn: "1 / 11",
             gridRow: " 5 /6",
+        },
+        "@media only screen and (min-width: 1200px)": {
+            width: "30%",
+        },
+        "@media only screen and (max-width: 768px)": {
+            width: "85%",
         }
     })
     return (
