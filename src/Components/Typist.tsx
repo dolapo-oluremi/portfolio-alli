@@ -11,10 +11,16 @@ const Typist = () => {
             animation: "cursor 1.1s infinite step-start"
         },
     })
+    const Flex = styled.span({
+        fontSize:"2rem",
+        "@media only screen and (max-width: 760px)": {
+            fontSize:"1.7rem",
+        }
+    })
     return (
         <div>
             {tx ?
-                <span style={{fontSize:"2rem"}}>FrontEnd | BackEnd | Mobile Apps</span> :
+                <Flex style={{fontSize:"2rem"}}>FrontEnd | BackEnd | Mobile Apps</Flex> :
                 <TypeAnimationStyled
                     className='typing'
                     sequence={[
