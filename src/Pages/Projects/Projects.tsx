@@ -12,16 +12,26 @@ import {
 import Tilt from "react-parallax-tilt";
 import { ColorPalette } from "../../typography";
 
+import styled from '@emotion/styled'
+
 export const Projects = () => {
+    const Container = styled.div({
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr 1fr",
+        gap: 100,
+        padding: "6rem 0",
+        minHeight: "100vh",
+        "@media only screen and (max-width: 1400px)": {
+            gridTemplateColumns: "1fr 1fr",
+            gap: 50,
+        },
+        "@media only screen and (max-width:  878px)": {
+            gridTemplateColumns: "1fr",
+        },
+    })
     return (
-        <div style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gap: 100,
-            padding: "6rem 0",
-            minHeight: "100vh"
-        }}>
-            {Array(7).fill(null).map(() => (<Tilt tiltMaxAngleX={1.5} tiltMaxAngleY={1.5} >
+        <Container>
+            {Array(7).fill(null).map((_v, i) => (<Tilt tiltMaxAngleX={1.5} tiltMaxAngleY={1.5} key={i}>
                 <CardWrapper color={ColorPalette.dark100}>
                     <CardImage background={'https://picsum.photos/200'} />
                     <CardTextWrapper>
@@ -41,7 +51,7 @@ export const Projects = () => {
                     </CardStatWrapper>
                 </CardWrapper>
             </Tilt>))}
-        </div>
+        </Container>
     );
 };
 
