@@ -7,7 +7,7 @@ const Home = () => {
     const Container = styled.div({
         background: ColorPalette.dark300,
         width: "100vw",
-        height: "100vh ",
+        height: "100dvh ",
         padding: "1rem 3rem",
         display: "flex",
         flexDirection: "row",
