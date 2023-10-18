@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home"
 import Projects from "./Pages/Projects/Projects"
 import { AnimatePresence } from "framer-motion";
 import Footer from "./Components/Footer/Footer";
+import Social from "./Components/Socials/Social";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <AnimatePresence mode='wait'>
         <BrowserRouter>
           <Navbar />
+          <Social />
           <Home />
           <Projects />
           <Footer />

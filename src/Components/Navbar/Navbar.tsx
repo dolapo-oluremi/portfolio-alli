@@ -6,6 +6,8 @@ import { ColorPalette, Colors, tabHeaders } from '../../typography'
 
 const Navbar = () => {
     const [isStickyNav, setIsStickyNav] = useState(false);
+
+    // needs to be a custom hook 
     const stickNavbar = () => {
         if (window.scrollY >= 60) {
             setIsStickyNav(true);
