@@ -72,7 +72,7 @@ const Navbar = () => {
     })
 
     const RenderMenuItems = () => {
-        const handleActiveTab = (e) => {
+        const handleActiveTab = (e : React.ChangeEvent<HTMLInputElement>) => {
             setActive(e.target.innerText)
         }
         return (<UList>

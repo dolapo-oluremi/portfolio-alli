@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
 import "./Resume.css"
 import dolapo_alli_resume from "../../assets/Resume/dolapo-alli.pdf";
-import { useState } from "react";
 import { COLORS } from "../../typography";
 
 const Resume = () => {

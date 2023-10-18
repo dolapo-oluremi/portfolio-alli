@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+
 import styled from '@emotion/styled'
 import { ColorPalette } from '../../typography'
-import { useForm } from 'react-hook-form'
 
 
 const Footer = () => {

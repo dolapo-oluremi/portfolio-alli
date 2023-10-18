@@ -21,7 +21,7 @@ export const Projects = () => {
             padding: "6rem 0",
             minHeight: "100vh"
         }}>
-            {Array(7).fill(null).map(v => (<Tilt tiltMaxAngleX={1.5} tiltMaxAngleY={1.5} >
+            {Array(7).fill(null).map(() => (<Tilt tiltMaxAngleX={1.5} tiltMaxAngleY={1.5} >
                 <CardWrapper color={ColorPalette.dark100}>
                     <CardImage background={'https://picsum.photos/200'} />
                     <CardTextWrapper>
